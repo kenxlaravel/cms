@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app='cmsApp'>
+<head>
+	<title>News</title>
+	<base href='/'>
+	<link rel='stylesheet' href="src/bootstrap.min.css"/>
+</head>
+<body>
+	<div class="container">
+			<div class='page-header'>
+				<h1>News</h1>
+			</div>
+			<div class="row">
+				<div class='col-sm-12' ng-view></div>
+			</div>
+	</div>
+	<script src='bower_components/jquery/dist/jquery.min.js'></script>
+	<script src='bower_components/bootstrap/dist/js/bootstrap.min.js'></script>
+	<script src='bower_components/angular/angular.min.js'></script>
+	<script src='bower_components/angular-route/angular-route.min.js'></script>
+	<script src='bower_components/angular-resource/angular-resource.min.js'></script>
+	<script src='bower_components/angular-messages/angular-messages.min.js'></script>
+	<script src='src/app.js'></script>
+	<script src='src/controller.js'></script>
+	<script src='src/filter.js'></script>
+	<script src='src/factories.js'></script>
+	<script src='src/directives.js'></script>
+</body>
+</html>

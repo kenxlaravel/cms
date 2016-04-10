@@ -1,0 +1,16 @@
+<h1>New Article</h1>
+
+<form name='newarticle' novalidate class="form-horizntal">
+	<form-field record='article' field='title' live='false' required='true'></form-field>
+	<form-field record='article' field='date' live='false' required='true'></form-field>
+	<form-field record='article' field='author' live='false' required='true'></form-field>
+	<form-field record='article' field='content' live='false' required='true'></form-field>
+
+	<form-field ng-repeat='(k,v) in article | keyFilter: "title" | keyFilter: "date" | keyFilter: "author" | keyFilter: "content"' record='article' field='{{k}}'></form-field>
+	
+	<div class="row  form-group">
+		<div class="col-sm-offset-2">
+			<button class="btn btn-primary" ng-click='save()'>Add New Article </button>
+		</div>
+	</div>
+</form>

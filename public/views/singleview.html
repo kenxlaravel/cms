@@ -1,0 +1,10 @@
+<h2> {{article.title[0]}} </h2>
+
+<h1>{{article.subtitle[0]}}</h1>
+
+<p>{{article.date[0]}}  {{article.author[0]}}</p>
+
+<p ng-init='limit = 100'>{{article.content[0] | limitTo:limit }}</p>
+<button type='button' ng-click="readMore()">read more</button>
+
+

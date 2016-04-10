@@ -1,0 +1,23 @@
+<p><input type="search" class="form-control" placeholder="search" ng-model='query'/></p>
+<table class='table table-hover table-bordered'>
+	<thead>
+		<tr>
+			<th ng-repeat='field in fields'>
+				{{ field | labelCase }}
+			</th>
+		</tr>
+	</thead>
+		<tbody ng-init='limit = 3'>
+			<tr ng-click='show(article.id)' ng-repeat='article in news | filter: query | orderBy: article.date:true | limitTo: limit as results'>
+				<td ng-repeat='field in fields'>
+				{{ article[field][0] }}
+				</td>
+			</tr>
+			<tr>
+				<td>				
+					<button btn btn-primary ng-hide="results.length === news.length" ng-click="limit = limit + 3">Load More</button>
+				</td>
+			</tr>
+		</tbody>
+
+</table>
